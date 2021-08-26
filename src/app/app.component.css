@@ -1,0 +1,31 @@
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header h1 {
+    font-size: 50px;
+    font-family: inherit;
+    font-weight: 800;
+}
+
+.header .btn {
+    width: 83%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+mat-card {
+    width: 80%;
+    margin-top: 20px;
+}
+
+mat-checkbox {
+    float: right;
+}
+
+mat-card-actions button {
+    margin-right: 1em;
+}

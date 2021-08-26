@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add Task</h1>
+<form #f="ngForm">
+    <div mat-dialog-content class="dialog-content">
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput [(ngModel)]="data.title" name="title" required>
+          <mat-error *ngIf="f.invalid">
+              Title is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Task</mat-label>
+          <input matInput [(ngModel)]="data.body" name="body" required>
+          <mat-error *ngIf="f.invalid">
+              Task is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button [mat-dialog-close]="data" [disabled]="f.invalid">Save</button>
+      </div>
+</form>

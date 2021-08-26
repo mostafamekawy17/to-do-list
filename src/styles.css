@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body { 
+    margin: 0;
+    background-color: cyan;
+}
+
+

@@ -1,0 +1,20 @@
+
+<div class="header">
+  <h1>To Do List</h1>
+  
+  <button mat-raised-button color="primary" class="btn" (click)="openDialog()">Add Task</button>
+</div>
+
+<div class="container">
+  <mat-card *ngIf="tasks.length == 0">
+    <mat-card-title>No Tasks</mat-card-title>
+  </mat-card>
+  <mat-card @translate *ngFor="let task of tasks; let i = index">
+    <mat-card-title>{{task.title}} <mat-checkbox color="primary">Done</mat-checkbox></mat-card-title>
+    <mat-card-content>{{task.body}}</mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="accent" (click)="editTask(i)">Edit</button>
+      <button mat-flat-button color="warn" (click)="onDelete(i)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
